@@ -1,3 +1,4 @@
+//The circle is made from CSS, courtesey of google
 const LoadingSpinner = () => {
   return (
     <div className="loading-container">

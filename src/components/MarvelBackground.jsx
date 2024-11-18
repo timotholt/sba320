@@ -1,4 +1,6 @@
 // Background component with Marvel theme
+// THIS is a giant hack.. it doesn't work like i wanted
+// it came from google and i shoehorned it into this project
 const MarvelBackground = () => {
   // Create grid of MARVEL text
   const createMarvelGrid = () => {
