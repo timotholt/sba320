@@ -7,6 +7,8 @@ import { fetchCharacters } from '../services/marvelApi';
 /**
  * createAsyncThunk creates a special action that can handle three states:
  * pending (loading), fulfilled (success), and rejected (error)
+ * 
+ * https://redux-toolkit.js.org/api/createAsyncThunk
  */
 export const searchCharacters = createAsyncThunk(
   'marvel/searchCharacters',  // This is like the action's name tag
