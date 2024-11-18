@@ -1,13 +1,18 @@
 // Background component with Marvel theme
 const MarvelBackground = () => {
-  // Create repeating MARVEL text
-  const marvelText = Array(50).fill('MARVEL').join(' ')
+  // Create grid of MARVEL text
+  const createMarvelGrid = () => {
+    const grid = []
+    for (let i = 0; i < 100; i++) {
+      grid.push(<span key={i}>MARVEL</span>)
+    }
+    return grid
+  }
 
   return (
     <>
       <div className="marvel-text-bg">
-        {marvelText}
-        {marvelText} {/* Double it for more coverage */}
+        {createMarvelGrid()}
       </div>
       <div className="background-overlay"></div>
       <div className="background-shapes">

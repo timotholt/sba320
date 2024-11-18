@@ -32,10 +32,10 @@
 
 @keyframes scrollText {
   0% {
-    transform: translate3d(-10%, 0, 0);
+    transform: rotate(-45deg) translate(-25%, -25%);
   }
   100% {
-    transform: translate3d(-60%, 0, 0);
+    transform: rotate(-45deg) translate(-75%, -75%);
   }
 }
 
@@ -61,26 +61,29 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200vw;
-  height: 200vh;
+  width: 400vw;  
+  height: 400vh; 
   font-family: 'Impact', sans-serif;
-  font-size: 2rem;
+  font-size: 4rem;  
   font-weight: bold;
   color: rgba(255, 255, 255, 0.15);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(-45deg);
-  user-select: none;
-  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);  
+  grid-template-rows: repeat(10, 1fr);     
+  place-items: center;
+  transform: rotate(-45deg) translate(-25%, -25%);  
   z-index: -2;
   overflow: hidden;
   white-space: nowrap;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   animation: scrollText 20s linear infinite;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+.marvel-text-bg span {
+  display: block;
+  padding: 1rem;
 }
 
 /* Create floating hexagon background elements */
