@@ -42,7 +42,11 @@ function App() {
 
   return (
     <>
-      {/* Animated background shapes */}
+      {/* Background Elements */}
+      <div className="marvel-text-bg">
+        {Array(20).fill('MARVEL').join(' ')}
+      </div>
+      <div className="background-overlay"></div>
       <div className="background-shapes">
         {[...Array(10)].map((_, i) => (
           <div key={i} className="shape" />
@@ -64,9 +68,29 @@ function App() {
           <button type="submit" className="search-button">Search</button>
         </form>
 
-        {/* Loading and error states */}
-        {status === 'loading' && <div>Loading...</div>}
-        {error && <div className="error">Error: {error}</div>}
+        {/* Loading State */}
+        {status === 'loading' && (
+          <div className="loading-container">
+            <div className="loading-spinner"></div>
+            <span>Searching the multiverse...</span>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="error-container">
+            <span className="error-icon">!</span>
+            <p className="error-message">
+              {error.includes('404')
+                ? "No heroes found. Try another search!"
+                : error.includes('401')
+                ? "Authentication failed."
+                : error.includes('429')
+                ? "Too many requests."
+                : `Error: ${error}`}
+            </p>
+          </div>
+        )}
         
         {/* Display our Marvel characters in a grid */}
         <div className="characters-grid">

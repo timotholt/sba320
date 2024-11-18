@@ -1,34 +1,47 @@
-# SBA320 - Marvel Character Search
+# Marvel Character Search
 
 A React application that allows users to search for Marvel characters using the Marvel API.
 
+## Project Requirements
 
-
-
-
-
+| Requirement | Status |
+| :--- | :---: |
+| Built with HTML, CSS, JavaScript, REACT, and Redux Toolkit | ✅ |
+| Hosted on Heroku or Netlify | ⏳ |
+| Frequent commits to GitHub | ✅ |
+| **README.md Content:** | |
+| Explanations of technologies used | ✅ |
+| Explanations of approach taken | ✅ |
+| Link to live site | ⏳ |
+| Usage instructions | ✅ |
+| Unsolved problems | ✅ |
 
 ## Technologies Used
 
-- React 18
-- Redux Toolkit for state management
-- Vite as the build tool
-- Marvel API for character data
-- Axios for API requests
-- CSS for styling
+| Category | Technologies |
+| :--- | :--- |
+| Frontend Framework | React 18 |
+| State Management | Redux Toolkit |
+| Build Tool | Vite |
+| API Integration | Marvel API, Axios |
+| Styling | CSS with Glassmorphism |
 
 ## Approach
 
-This application follows a simple and clean architecture:
-- Redux Toolkit for centralized state management
-- Async thunks for API calls
-- Responsive grid layout for character cards
-- Error handling for failed API requests
-- Loading states for better user experience
+This application follows a modern architecture with these key features:
+
+| Feature | Description |
+| :--- | :--- |
+| State Management | Centralized using Redux Toolkit |
+| API Integration | Async thunks for efficient data fetching |
+| UI Design | Responsive grid with glassmorphism effects |
+| Error Handling | Comprehensive API error management |
+| User Experience | Loading states and smooth animations |
+| Background | Dynamic animated gradient with floating elements |
 
 ## Live Site
 
-[Link to be added after deployment to render.com]
+[Link to be added after deployment]
 
 ## Usage Instructions
 
@@ -42,6 +55,7 @@ This application follows a simple and clean architecture:
 
 ## Unsolved Problems
 
-- Rate limiting: Marvel API has a limit of 3000 calls per day
-- Image optimization could be improved
-- Could add pagination for large result sets
+| Issue | Description |
+| :--- | :--- |
+| Rate Limiting | Marvel API has a limit of 3000 calls per day |
+| Pagination | Need to add for large result sets |
