@@ -9,7 +9,7 @@ const SearchForm = () => {
   const handleSearch = (e) => {
     e.preventDefault()
     if (searchTerm.trim()) {
-      dispatch(searchCharacters(searchTerm))
+      dispatch(searchCharacters(searchTerm.trim()))
     }
   }
 
