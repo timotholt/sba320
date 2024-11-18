@@ -12,8 +12,12 @@ const BASE_URL = 'https://gateway.marvel.com/v1/public';
 
 /**
  * Marvel API needs a special hash for security
- * It's like making a secret handshake with the API
- * hash = md5(timestamp + private_key + public_key)
+ * See: https://developer.marvel.com/documentation/authorization
+ * 
+ * Authentication requires three parameters:
+ * 1. ts - a timestamp
+ * 2. apikey - your public key
+ * 3. hash - a md5 digest of ts+privateKey+publicKey
  */
 const generateHash = (timestamp) => {
   // console.log('Timestamp:', timestamp) // Making sure timestamp was correct

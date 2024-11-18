@@ -7,12 +7,12 @@ A React application that allows users to search for Marvel characters using the 
 | Requirement | Status |
 | :--- | :---: |
 | Built with HTML, CSS, JavaScript, REACT, and Redux Toolkit | ✅ |
-| Hosted on Heroku or Netlify | ⏳ |
+| Hosted on Heroku or Netlify | ✅ |
 | Frequent commits to GitHub | ✅ |
 | **README.md Content:** | |
 | Explanations of technologies used | ✅ |
 | Explanations of approach taken | ✅ |
-| Link to live site | ⏳ |
+| Link to live site: https://tim-otholt-sba320.netlify.app/ | ✅ |
 | Usage instructions | ✅ |
 | Unsolved problems | ✅ |
 
@@ -24,7 +24,27 @@ A React application that allows users to search for Marvel characters using the 
 | State Management | Redux Toolkit |
 | Build Tool | Vite |
 | API Integration | Marvel API, Axios |
+| Security | CryptoJS (MD5 hashing) |
 | Styling | CSS with Glassmorphism |
+
+## API Authentication
+
+The Marvel API requires a specific authentication process for each request. See the [official Marvel API documentation](https://developer.marvel.com/documentation/authorization) for full details.
+
+1. **Required Parameters:**
+   - Timestamp (ts)
+   - Public API Key
+   - Hash (md5 digest)
+
+2. **Hash Generation:**
+   ```javascript
+   hash = md5(timestamp + privateKey + publicKey)
+   ```
+
+3. **Security Measures:**
+   - API keys stored in environment variables
+   - Each request includes a unique timestamp
+   - Hash verification prevents unauthorized API usage
 
 ## Approach
 
@@ -41,7 +61,7 @@ This application follows a modern architecture with these key features:
 
 ## Live Site
 
-[Link to be added after deployment]
+https://tim-otholt-sba320.netlify.app/
 
 ## Usage Instructions
 
